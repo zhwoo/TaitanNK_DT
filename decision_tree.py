@@ -253,7 +253,11 @@ class decisionTree(object):
         return -entropy
 
     """
-
+    """
+    决策树构建说明，sklearn构建决策树可以通过两种方式，一种是将非数值的离散属性转换为数值离散属性（如性别用0和1表示），第二种是onehot的方式重构特征向量，
+    如共有两个特征，分别是年龄（老，中，少）和是否是学生（是，否），则对应onehot为(老？，中？，少？，学生？)四维向量，每维的取值只能是0或者1
+    sklearn建立的决策树都是二叉的，多叉树可以转换
+    """
 
     def sk_buile_tree(self, case_set):
         header = { "1":"Pclass", "2":"Sex ", "3": "Age", "4": "SlibSp", "5": "Parch", "6": "Fare", "7": "Embarked" }
